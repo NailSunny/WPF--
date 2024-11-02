@@ -1,0 +1,41 @@
+﻿<Window x:Class="WPF_CactusProject_2024.pages.Edit_VistavkaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование выставки" Height="450" Width="800">
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <WrapPanel Margin="0 0 0 5">
+                <TextBlock Text="ID :" Margin="0 0 10 0"/>
+                <TextBlock Text="{Binding Id_vistavka}"/>
+            </WrapPanel>
+            <WrapPanel Margin="0 0 0 5">
+                <TextBlock Text="Место проведения:" Margin="0 0 5 0"/>
+                <TextBox x:Name="TxtMesto" Text="{Binding Vistavka.Mesto_provedeniya, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+            </WrapPanel>
+            <WrapPanel Margin="0 0 0 5">
+                <TextBlock Text="Кактусы:" Margin="0 0 20 0"/>
+                <ComboBox Width="150" x:Name="CmbxCactus" DisplayMemberPath="Name_cactus" SelectedItem="{Binding Cactus}" />
+            </WrapPanel>
+            <WrapPanel Margin="0 0 0 5">
+                <TextBlock Text="Дата:" Margin="0 0 5 0"/>
+                <DatePicker x:Name="DatePicker"  SelectedDate="{Binding Vistavka.Date, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+            </WrapPanel>
+            <WrapPanel Margin="0 0 0 5">
+                <TextBlock Text="Награда:" Margin="0 0 28 0"/>
+                <TextBox x:Name="TxtNagrada" Text="{Binding Nagrada, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+            </WrapPanel>
+            <WrapPanel Margin="0 0 0 5">
+                <TextBlock Text="Комментарий:" Margin="0 0 10 0"/>
+                <TextBox x:Name="TxtComment" Text="{Binding Vistavka.Comment, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+            </WrapPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 0">
+            <Button Content="Сохранить" x:Name="BtnSave" Click="BtnSave_Click" Background="Green" Margin="0 0 10 0"/>
+            <Button Content="Назад" x:Name="BtnBack" Click="BtnBack_Click" Background="Red"/>
+        </StackPanel>
+    </Grid>
+</Window>

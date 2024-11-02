@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7e8c7c8441ab4de4ab8182c55f021738" Name="Diagram1">
+        <EntityTypeShape EntityType="Cactus_ProjectModel.Cactus" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Cactus_ProjectModel.Cactus_Vistavka" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Cactus_ProjectModel.Vid" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Cactus_ProjectModel.Vistavka" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="Cactus_ProjectModel.FK_Cactus_Vid" ManuallyRouted="false" />
+        <AssociationConnector Association="Cactus_ProjectModel.FK_Cactus_Vistavka_Cactus" ManuallyRouted="false" />
+        <AssociationConnector Association="Cactus_ProjectModel.FK_Cactus_Vistavka_Vistavka" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
